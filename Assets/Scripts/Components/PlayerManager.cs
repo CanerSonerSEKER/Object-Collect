@@ -24,7 +24,7 @@ namespace Components
 
         private void CreateController()
         {
-            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), Vector3.zero, Quaternion.identity);
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), Vector3.up * 1.1f, Quaternion.identity);
         }
     }
 }

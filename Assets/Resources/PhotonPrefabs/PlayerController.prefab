@@ -94,11 +94,12 @@ GameObject:
   - component: {fileID: 2510345372654151989}
   - component: {fileID: 8162093523744908876}
   - component: {fileID: 2655542542994941296}
-  - component: {fileID: 6095696384653769161}
+  - component: {fileID: 7477019501016708458}
   - component: {fileID: 369007256691513331}
   - component: {fileID: 3911636525803754030}
   - component: {fileID: 4132027421033107306}
   - component: {fileID: 3364343145038866653}
+  - component: {fileID: 1728436977082331885}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -115,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 2225047127315349018}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -173,7 +174,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6095696384653769161
+--- !u!136 &7477019501016708458
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,6 +281,19 @@ MonoBehaviour:
   _walkSpeed: 3
   _jumpForce: 200
   _smoothTime: 0.15
+--- !u!114 &1728436977082331885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225047127315349018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32737c56ef04f4d4f81830d420d7de5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerController: {fileID: 3364343145038866653}
 --- !u!1 &4553579387619241077
 GameObject:
   m_ObjectHideFlags: 0

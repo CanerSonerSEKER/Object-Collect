@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Realtime;
 using TMPro;
 using UnityEngine;
 
@@ -7,16 +8,16 @@ namespace Components
     public class PlayerListItem : MonoBehaviourPunCallbacks
     {
         [SerializeField] private TMP_Text _text;
-        private Photon.Realtime.Player _player;
+        private Player _player;
 
-        public void SetUp(Photon.Realtime.Player player)
+        public void SetUp(Player player)
         {
             _player = player;
 
             _text.text = _player.NickName; 
         }
 
-        public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
+        public override void OnPlayerLeftRoom(Player otherPlayer)
         {
             if (_player == otherPlayer)
             {

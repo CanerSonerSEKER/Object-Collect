@@ -1,6 +1,8 @@
-using System;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.Events;
+using WorldObjects;
+using Debug = UnityEngine.Debug;
 
 namespace Components
 {
@@ -8,7 +10,7 @@ namespace Components
     {
         [SerializeField] private GameObject _cameraHolder; 
         [SerializeField] private float _mouseSensitivity, _sprintSpeed, _walkSpeed, _jumpForce, _smoothTime;
-
+        
         private float _verticalLookRotation;
         private bool _grounded;
         private Vector3 _smoothMoveVelocity;
@@ -21,8 +23,9 @@ namespace Components
         {
             _rigidbody = GetComponent<Rigidbody>();
             _photonView = GetComponent<PhotonView>();
+            
         }
-
+        
         private void Start()
         {
             if (_photonView.IsMine) return;
