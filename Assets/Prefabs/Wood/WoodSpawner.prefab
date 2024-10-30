@@ -50,3 +50,4 @@ MonoBehaviour:
   _woodSpawnFreq: 1
   _woodPrefab: {fileID: 1871542181829045364, guid: 0a77b8700cd68c444914528633bb4384, type: 3}
   _spawnOffSetY: 0.25
+  _backTransform: {fileID: 0}

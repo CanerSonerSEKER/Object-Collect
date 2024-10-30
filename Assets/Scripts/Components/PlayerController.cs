@@ -1,8 +1,5 @@
 using Photon.Pun;
 using UnityEngine;
-using UnityEngine.Events;
-using WorldObjects;
-using Debug = UnityEngine.Debug;
 
 namespace Components
 {
@@ -18,12 +15,11 @@ namespace Components
         
         private Rigidbody _rigidbody;
         private PhotonView _photonView;
-
+        
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
             _photonView = GetComponent<PhotonView>();
-            
         }
         
         private void Start()
@@ -45,7 +41,7 @@ namespace Components
             Move();
 
             Jump();
-            
+
         }
 
         private void Look()

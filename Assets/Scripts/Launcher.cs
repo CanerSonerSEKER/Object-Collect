@@ -6,6 +6,7 @@ using Photon.Realtime;
 using UnityEngine;
 using TMPro;
 using UI;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
@@ -50,8 +51,13 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
             return;
         }
+
+        RoomOptions roomOptions = new RoomOptions();
+        Hashtable options = new Hashtable();
+        options.Add("Time", 30);
+        roomOptions.CustomRoomProperties = options;
         
-        PhotonNetwork.CreateRoom(_roomNameInputField.text);
+        PhotonNetwork.CreateRoom(_roomNameInputField.text, roomOptions);
         MenuManager.Instance.OpenMenu("Loading");
     }
 

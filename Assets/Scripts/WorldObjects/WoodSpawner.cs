@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -56,6 +57,10 @@ namespace WorldObjects
             pickedWood.Pickable -= OnPickable;
             _woods.Remove(pickedWood);
             Destroy(pickedWood.gameObject);
+            
+
+            // Transform olmalı bu noktada çünkü yok oluyor üstüne sırt bölgesine ışınlanması toplanması lazım . Ve oluşturulan listenin yalnız bir elemanı kullanılabilir kalmalı.
+            //pickedWood.transform.DOMove(_backTransform.transform.position, 0.5f).SetEase(Ease.InOutBounce);
         }
 
         private IEnumerator SpawnRoutine()

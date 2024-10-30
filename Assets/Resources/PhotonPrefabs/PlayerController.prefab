@@ -294,6 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 3364343145038866653}
+  _scoreMulti: 5
 --- !u!1 &4553579387619241077
 GameObject:
   m_ObjectHideFlags: 0
